@@ -16,14 +16,14 @@
 			<ul id="nav-mobile" class="left hide-on-med-and-down ">
 				<li id="guideTab"><a onclick="RouteTo('guide')">Guide </a></li>
 				<li id="DatabaseTab" class="active"><a onclick="RouteTo('database')">Database</a></li>
-				<li id="cardtab"><a onclick="RouteTo('card')">Card View </a></li>
+				<li id="cardTab"><a onclick="RouteTo('card')">Card View </a></li>
 			</ul>
 			<ul class="right hide-on-med-and-down">
 				<li><a class="waves-effect waves-light btn" onclick="RouteTo('form')"><i class="material-icons right">add</i>Add</a></li>
 			</ul>
 		</div>
 	</nav>
-	<iframe id="iframeID" class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+	<iframe id="iframeID" allow="fullscreen;" class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
 	<script>
 	function RouteTo(view) {
 		const matches = document.querySelectorAll("li");
@@ -40,7 +40,7 @@
 		}
 		if(view == 'card') {
 			document.getElementById('iframeID').src = "https://airtable.com/embed/shr9BaD74cSMHo69h?backgroundColor=gray&viewControls=on";
-			var element = document.getElementById("cardtab");
+			var element = document.getElementById("cardTab");
 			element.classList.add("active");
 		}
 		if(view == 'guide') {
