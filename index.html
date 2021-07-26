@@ -1,56 +1,125 @@
-<html>
+   <html>
+          <head>
+            <title> PfizerChallenge </title>
+            <link rel="icon" href="https://logo-logos.com/wp-content/uploads/2016/10/Pfizer_logo_logotype.png" />
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<head>
-	<title> PfizerChallenge </title>
-	<link rel="icon" href="https://logo-logos.com/wp-content/uploads/2016/10/Pfizer_logo_logotype.png" />
-	<!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
+                        <!-- Social Icons Stylesheet -->
 
-<body style="margin:0px;padding:0px;overflow:hidden">
-	<nav style="background-color:;">
-		<div class="nav-extended"> <a href="#" class="brand-logo center">Pfizer Challenge</a>
-			<ul id="nav-mobile" class="left hide-on-med-and-down ">
-				<li id="guideTab"><a onclick="RouteTo('guide')">Guide </a></li>
-				<li id="DatabaseTab" class="active"><a onclick="RouteTo('database')">Database</a></li>
-				<li id="cardTab"><a onclick="RouteTo('card')">Card View </a></li>
-			</ul>
-			<ul class="right hide-on-med-and-down">
-				<li><a class="waves-effect waves-light btn" style="background-color:" onclick="RouteTo('form')"><i class="material-icons right">add</i>Add</a></li>
-			</ul>
-		</div>
-	</nav>
-	<iframe id="iframeID"  class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
-	<script>
-	function RouteTo(view) {
-		const matches = document.querySelectorAll("li");
-		matches.forEach(function(element) {
-			element.classList.remove("active");
-		});
-		if(view == 'form') {
-			document.getElementById('iframeID').src = "https://airtable.com/embed/shrmnQh2npX4Citl5?backgroundColor=gray";
-		}
-		if(view == 'database') {
-			document.getElementById('iframeID').src = "https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on";
-			var element = document.getElementById("DatabaseTab");
-			element.classList.add("active");
-		}
-		if(view == 'card') {
-			document.getElementById('iframeID').src = "https://airtable.com/embed/shr9BaD74cSMHo69h?backgroundColor=gray&viewControls=on";
-			var element = document.getElementById("cardTab");
-			element.classList.add("active");
-		}
-		if(view == 'guide') {
-			document.getElementById('iframeID').src = "https://www.youtube.com/embed/KAf_hjh4z6E";
-			document.getElementById('iframeID').setAttribute("allowfullscreen", "");
-			var element = document.getElementById("guideTab");
-			element.classList.add("active");
-		}
-	}
-	</script>
-</body>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</html> 
+            
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+          </head>
+          
+          <style>
+
+.center-cols > .col {
+  float:none; /* disable the float */
+  display: inline-block; /* make blocks inline-block */
+  text-align: initial; /* restore text-align to default */
+}
+
+.iconcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+</style>
+          
+          
+          
+          
+          
+          <body style="margin:0px;padding:0px;overflow:hidden">
+        
+         <div class="row center-cols center-align">
+  <div class="col m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="http://www.ilikewallpaper.net/ipad-wallpapers/download/2268/Square-Pattern-ipad-wallpaper-ilikewallpaper_com.jpg">
+        <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Kashif Qureshi</span>
+      </div>
+      <div class="card-content">
+        <p>Bio</p>
+      </div>
+      
+      <div class="card-action">
+      
+      <!--
+      
+      <a href="#"><i class="fa fa-linkedin fa-fw"></i></a>
+          <a href="#"><i class="material-icons">mail</i></a>
+          <a href="#"><i class="material-icons">add</i></a>
+<a class="waves-effect waves-light btn"><i class="fa fa-linkedin fa-fw"></i> Linkedin</a>
+<a class="waves-effect waves-light btn"><i class="fa fa-linkedin fa-fw"></i> Linkedin</a>
+
+<a class="waves-effect waves-light btn-floating social twitter">
+<i class="fa fa-twitter"></i> Sign in with twitter</a>
+
+<a class="waves-effect waves-light btn-floating social facebook">
+<i class="fa fa-facebook"></i> Sign in with facebook</a>
+-->
+<div class = "iconcontainer">
+<a href="mailto:qures072@umn.edu" target="_blank" rel="noopener noreferrer" class="waves-effect waves-light btn-floating social github" style="background-color: #34a853">
+<i class="material-icons">email</i></a>
+
+<a href="https://www.linkedin.com/in/kashif-qureshi001/" target="_blank" rel="noopener noreferrer" class="waves-effect waves-light btn-floating social twitter" style="background-color: #0077b5">
+<i class="fa fa-linkedin"></i></a>
+
+<a href="https://github.com/PfizerChallenge" target="_blank" rel="noopener noreferrer" class="waves-effect waves-light btn-floating social github" style="background-color: #333">
+<i class="fa fa-github"></i></a>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col m4">
+    <div class="card">
+      <div class="card-image">
+        <img src="http://www.ilikewallpaper.net/ipad-wallpapers/download/2268/Square-Pattern-ipad-wallpaper-ilikewallpaper_com.jpg">
+        <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Team Member 2</span>
+      </div>
+      <div class="card-content">
+        <p>Bio</p>
+      </div>
+      <div class="card-action">
+      <div class = "iconcontainer">
+
+<a href="#" target="_blank" rel="noopener noreferrer" class="waves-effect waves-light btn-floating social github" style="background-color: #34a853">
+<i class="material-icons">email</i></a>
+
+<a href="#" target="_blank" rel="noopener noreferrer" class="waves-effect waves-light btn-floating social twitter" style="background-color: #0077b5">
+<i class="fa fa-linkedin"></i></a>
+
+<a href="#" target="_blank" rel="noopener noreferrer" class="waves-effect waves-light btn-floating social github" style="background-color: #333">
+<i class="fa fa-github"></i></a>    
+</div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red" class="fbtn" href="test.html"><i class="material-icons">home</i></a></li>
+    <li><a class="btn-floating yellow darken-1" class="fbtn" href="#"><i class="material-icons">work</i></a></li>
+    <li><a class="btn-floating green" class="fbtn" href="about.html"><i class="material-icons">account_circle</i></a></li>
+    <li><a class="btn-floating blue" class="fbtn" href="contact.html"><i class="material-icons">speaker_notes</i></a></li>
+  </ul>
+</div>
+
+-->
+
+<div class="clear" style="clear:both; height: 100px;">
+</div>
