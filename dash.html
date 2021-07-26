@@ -1,37 +1,44 @@
-
-        
-<html>
-<head>
-	<title> PfizerChallenge </title>
-	<link rel="icon" href="https://logo-logos.com/wp-content/uploads/2016/10/Pfizer_logo_logotype.png" />
-   <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
-<body style="margin:0px;padding:0px;overflow:hidden">        
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Logo</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-		<li><a class="waves-effect waves-light btn" onclick="Route('add')"><i class="material-icons right">add</i>Add</a></li>
-      </ul>
-    </div>
-  </nav>
-	
-	<iframe id="formId" class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrmnQh2npX4Citl5?backgroundColor=gray" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
-
-<script>
-function Route(view) {
-console.log("view");
-}
-</script>
-
-</body>
-</html>
-{"mode":"full","isActive":false}
+        <html>
+          <head>
+            <title> PfizerChallenge </title>
+            <link rel="icon" href="https://logo-logos.com/wp-content/uploads/2016/10/Pfizer_logo_logotype.png" />
+            <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          </head>
+          <body style="margin:0px;padding:0px;overflow:hidden">
+            <nav>
+              <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Logo</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                  <li>
+                    <a onclick="RouteTo('browse')">Browse</a>
+                  </li>
+                  <li>
+                    <a href="badges.html">Components</a>
+                  </li>
+                  <li>
+                    <a href="collapsible.html">JavaScript</a>
+                  </li>
+                  <li>
+                    <a class="waves-effect waves-light btn" onclick="RouteTo('form')">
+                      <i class="material-icons right">add</i>Add </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <iframe id="iframeID" class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+            <script>
+              function RouteTo(view) {
+                if (view == 'form') {
+                  document.getElementById('iframeID').src = "https://airtable.com/embed/shrmnQh2npX4Citl5?backgroundColor=gray";
+                }
+                if (view == 'browse') {
+                  document.getElementById('iframeID').src = "https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on";
+                }
+              }
+            </script>
+          </body>
+        </html> 
