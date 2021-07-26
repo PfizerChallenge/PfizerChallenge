@@ -6,26 +6,77 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<!-- Compiled and minified JavaScript These scripts needed for sidenav initialization-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
 </head>
 
+
 <body style="margin:0px;padding:0px;overflow:hidden">
-	<nav style="background-color:;">
-		<div class="nav-extended"> <a href="#" class="brand-logo center">Pfizer Challenge</a>
-			<ul id="nav-mobile" class="left hide-on-med-and-down ">
+	
+ 
+     <nav style="background-color:;">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Pfizer Challenge</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
 				<li id="guideTab"><a onclick="RouteTo('guide')">Guide </a></li>
-				<li id="teamTab"><a onclick="RouteTo('team')">Team </a></li>				
+                <li id="teamTab"><a onclick="RouteTo('team')">Team </a></li>				
 				<li id="DatabaseTab" class="active"><a onclick="RouteTo('database')">Database</a></li>
 				<li id="cardTab"><a onclick="RouteTo('card')">Card View </a></li>
-			</ul>
+      </ul>
+      
 			<ul class="right hide-on-med-and-down">
 				<li><a class="waves-effect waves-light btn" style="background-color:" onclick="RouteTo('form')"><i class="material-icons right">add</i>Add</a></li>
 			</ul>
-		</div>
-	</nav>
+      
+      
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+<li id="guideTab"><a onclick="RouteTo('guide')">Guide </a></li>
+<li id="teamTab"><a onclick="RouteTo('team')">Team </a></li>
+              <li id="DatabaseTab" class="active"><a onclick="RouteTo('database')">Database</a></li>
+				<li id="cardTab"><a onclick="RouteTo('card')">Card View </a></li>  
+         
+
+         				<li><a class="waves-effect waves-light btn" style="background-color:" onclick="RouteTo('form')">Add</a></li>
+
+                
+  </ul>
+    
+    
+
+    
+
+    
+    
+    
+    
 	<iframe id="iframeID"  class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrYDoWK45feIMVTN?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
-	<script>
+	
+    
+    
+    
+ 
+
+    
+    
+    
+    
+    <script>
+     $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+    
+    
+    
 	function RouteTo(view) {
 		const matches = document.querySelectorAll("li");
 		matches.forEach(function(element) {
