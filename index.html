@@ -10,14 +10,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
 </head>
+<style>
+.clickableLogo {
+    cursor: pointer;
+}
 
+</style>
 
 <body style="margin:0px;padding:0px;overflow:hidden">
 	
  
      <nav style="background-color:;">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">Pfizer Challenge</a>
+      <a onclick="RouteTo('database')" class="brand-logo center clickableLogo">Pfizer Challenge</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="left hide-on-med-and-down">
 				<li id="guideTab"><a onclick="RouteTo('guide')">Guide </a></li>
