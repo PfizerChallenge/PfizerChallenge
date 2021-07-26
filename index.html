@@ -15,6 +15,7 @@
 		<div class="nav-extended"> <a href="#" class="brand-logo center">Pfizer Challenge</a>
 			<ul id="nav-mobile" class="left hide-on-med-and-down ">
 				<li id="guideTab"><a onclick="RouteTo('guide')">Guide </a></li>
+				<li id="teamTab"><a onclick="RouteTo('team')">Team </a></li>				
 				<li id="DatabaseTab" class="active"><a onclick="RouteTo('database')">Database</a></li>
 				<li id="cardTab"><a onclick="RouteTo('card')">Card View </a></li>
 			</ul>
@@ -49,6 +50,14 @@
 			var element = document.getElementById("guideTab");
 			element.classList.add("active");
 		}
+		if(view == 'team') {
+			document.getElementById('iframeID').src = "https://pfizerchallenge.github.io/team";
+			var element = document.getElementById("teamTab");
+			element.classList.add("active");
+		}
+		
+		
+		
 	}
 	</script>
 </body>
